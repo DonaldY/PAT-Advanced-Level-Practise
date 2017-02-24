@@ -1,12 +1,12 @@
-package cn.Down;
+
 
 /**
  * Created by donal on 2017/2/23.
  */
 public class DownUtilsTest {
     public static void main(String[] args) {
-        DownUtils downUtils = new DownUtils("http://p1.gexing.com/G1/M00/C8/77/rBACJlYnjHzxEOY2AAC9B6vX98g105.jpg"
-            , "ais.jpg",  5);
+        DownUtils downUtils = new DownUtils("https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/d1a20cf431adcbef25b551dfaaaf2edda2cc9f61.jpg"
+            , "ais2.jpg",  5);
         downUtils.download();
 
         /*new Thread(new Runnable() {
