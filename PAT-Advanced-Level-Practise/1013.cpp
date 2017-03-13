@@ -6,11 +6,12 @@
 
 /**
     meaning of the title:
-    N: city£¬M£ºhighway£¬K£ºneek checked cities number
+    N: city   Mï¼šhighwayï¼ŒKï¼šneek checked cities number
 
-    thinking£º
-    ²¢²é¼¯
+    thinkingï¼š
+    å¹¶æŸ¥é›†
 */
+
 
 #include<cstdio>
 
@@ -68,5 +69,4 @@ int main(void) {
     }
     return 0;
 }
-
 
