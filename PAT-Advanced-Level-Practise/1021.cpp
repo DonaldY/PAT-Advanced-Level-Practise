@@ -65,8 +65,7 @@ int dfs(int n) {
     return ans + 1;
 }
 
-int main(void) {
-
+void init() {
     scanf("%d", &N);
 
     for (int i = 1; i <= N; ++i) {
@@ -80,7 +79,9 @@ int main(void) {
         graph[y].push_back(x);
         unite(x, y);
     }
+}
 
+bool isATree() {
     int components = 0;
     for (int i = 1; i <= N; ++i) {
         if (par[i] == i) {
@@ -90,9 +91,13 @@ int main(void) {
 
     if (components > 1) {
         printf("Error: %d components\n", components);
-        return 0;
+        return false;
     }
 
+    return true;
+}
+
+void findDeepestRoots() {
     int maxDeep = -1;
 
     for (int i = 1; i <= N; ++i) {
@@ -110,6 +115,18 @@ int main(void) {
             printf("%d\n", i);
         }
     }
+}
+
+
+int main(void) {
+
+    init();
+
+    if (!isATree()) {
+        return 0;
+    }
+
+    findDeepestRoots();
 
     return 0;
 }
