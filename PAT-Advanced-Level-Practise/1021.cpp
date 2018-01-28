@@ -56,9 +56,9 @@ int dfs(int n) {
     flag[n] = 1;
     int ans = 0;
 
-    for (int i = 1; i <= N; ++i) {
-        if (flag[i] == 0 && graph[n][i] == 1) {
-            int temp = dfs(i);
+    for (int i = 0; i < graph[n].size(); ++i) {
+        if (flag[graph[n][i]] == 0) {
+            int temp = dfs(graph[n][i]);
             ans = max(temp, ans);
         }
     }
@@ -76,8 +76,8 @@ int main(void) {
     for (int i = 1; i < N; ++i) {
         int x, y;
         scanf("%d%d", &x, &y);
-        graph[x][y] = 1;
-        graph[y][x] = 1;
+        graph[x].push_back(y);
+        graph[y].push_back(x);
         unite(x, y);
     }
 
