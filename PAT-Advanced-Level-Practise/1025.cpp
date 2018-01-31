@@ -8,7 +8,7 @@
     根据分数进行排序
     1. 按分数从高到低
     2. 同分数
-        若 location_number 和 local_rank 均相等，则同排名
+        按registration_number排高低(从小到大)
 */
 
 
