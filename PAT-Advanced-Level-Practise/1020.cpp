@@ -45,8 +45,11 @@ void pre(int root, int start, int end, int index) {
     while(i < end && inOrderArr[i] != postArr[root]) {
         i++;
     }
+
     levelOrderArr[index] = postArr[root];
+
     pre(root - 1 - end + i, start, i - 1, 2 * index + 1);
+
     pre(root - 1, i + 1, end, 2 * index + 2);
 }
 
@@ -58,7 +61,7 @@ int main(void) {
 
     int cnt = 0;
 
-    for(int i = 0; i < 31; i++) {
+    for(int i = 0; i < sizeof((levelOrderArr)) / sizeof(levelOrderArr)[0]; i++) {
         if (levelOrderArr[i] != 0) {
             if (cnt != 0) printf(" ");
             printf("%d", levelOrderArr[i]);
