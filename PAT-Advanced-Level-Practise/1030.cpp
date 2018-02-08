@@ -16,11 +16,12 @@
 #include<cstring>
 
 using namespace std;
+#define MAXN 505
 
 int N;
 int M;
 int S, D;
-
+int dis[MAXN][MAXN];
 
 int main(void) {
 
